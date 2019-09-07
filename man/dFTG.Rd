@@ -20,7 +20,7 @@ Gives the density of the FTG. The length of the result is determined by the leng
 }
 \description{
 This function computes the density of the full-tail gamma with the input sample data. The expression for the density used is:
-\deqn{g(x; \alpha, \theta, \rho) = \theta(\rho + \theta x)^{\alpha - 1}\exp(-(\rho + \theta x))/\Gamma(\alpha, \rho).}
+\deqn{g(x; \alpha, \theta, \rho) = \frac{\rho^{\alpha}}{\sigma}\left(\rho + \frac{x}{\sigma}\right)^{\alpha - 1}\exp\left(-\left(\rho + \frac{x}{\sigma}\right)\right)/\Gamma(\alpha, \rho).}
 }
 \examples{
 a <- 0.3

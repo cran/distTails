@@ -1,7 +1,7 @@
 #' FTG Probability Function
 #'
 #' This function computes the probability of the full-tail gamma with the input sample data. The expression for the probability used is:
-#' \deqn{G(x; \alpha, \theta, \rho) = 1 - \Gamma(\alpha, \rho + \theta x)/\Gamma(\alpha, \rho).}
+#' \deqn{G(x; \alpha, \theta, \rho) = 1 - \Gamma\left(\alpha, \rho\left(1 + \frac{x}{\sigma}\right)\right)/\Gamma(\alpha, \rho).}
 #' @param x Sample data.
 #' @param threshold Minimum value of the tail.
 #' @param scale Scale parameter.
@@ -16,6 +16,6 @@ pFTG <- function(x, threshold, scale, shape) {
   a <- shape
   s <- scale
   r <- threshold
-  cdf <- 1 - gsl::gamma_inc(a, r + r / s * x) / gsl::gamma_inc(a, r)
+  cdf <- 1 - gsl::gamma_inc(a, r *(1 + x / s)) / gsl::gamma_inc(a, r)
   return(cdf)
 }

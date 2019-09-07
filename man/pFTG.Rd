@@ -20,7 +20,7 @@ Gives the distribution function of the FTG. The length of the result is determin
 }
 \description{
 This function computes the probability of the full-tail gamma with the input sample data. The expression for the probability used is:
-\deqn{G(x; \alpha, \theta, \rho) = 1 - \Gamma(\alpha, \rho + \theta x)/\Gamma(\alpha, \rho).}
+\deqn{G(x; \alpha, \theta, \rho) = 1 - \Gamma\left(\alpha, \rho\left(1 + \frac{x}{\sigma}\right)\right)/\Gamma(\alpha, \rho).}
 }
 \examples{
 pFTG(1,1,1,1)

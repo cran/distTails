@@ -15,7 +15,7 @@ fittail(sample, dist = "TailW")
 Gives a list of the estimated parameters fo the function fitted. For the TailW it returns, scale and shape. Fot the FTG it returns the parameters scale, shape, and threshold.
 }
 \description{
-This function scales the input data w.r.t. the threshold and performs MLE with a tailW.
+Maximum Likelihood Estimation of the tails by fitting a tailW or a FTG.
 }
 \examples{
 scale <- 2
@@ -28,5 +28,4 @@ theo_density <- dtailw(x_seq, threshold = threshold, scale = fits$scale, shape =
 hist(s, probability = TRUE, breaks = "FD")
 lines(x = x_seq, y = theo_density, col = "red")
 }
-\keyword{Tail}
-\keyword{fitting}
+\keyword{Tail-fitting}

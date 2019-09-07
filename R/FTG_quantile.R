@@ -1,7 +1,6 @@
 #' FTG Quantile function
 #'
-#' This function computes the quantiles of the full-tail gamma with the input sample data. The expression for the probability used is:
-#' \deqn{Q(p; \alpha, \theta, \rho) =\Gamma^{-1} \Big( \alpha, (1-p)\Gamma(\alpha, \rho) - \rho \Big)/ \theta }
+#' This function computes the quantiles of the full-tail gamma with the input sample data.
 #' @param p Probability.
 #' @param threshold Minimum value of the tail.
 #' @param scale Scale parameter.
